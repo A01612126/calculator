@@ -16,7 +16,17 @@
             <div class="layout-screen">
                 <span id="operand1Display"></span>
             </div>
+    <div class="button-container">
+        <div class="button-separation">
+            <div onclick="prev()" class="buttons">prev</div>
         </div>
+        <div class="button-separation">
+            <div onclick="pressButton('^')" class="buttons">^</div>
+        </div>
+        <div class="button-separation">
+            <div onclick="del()" class="buttons">del</div>
+        </div>
+    </div>
 <!-- buttons  7,8,9, x-->
         <div class="button-container">
             <div class="button-separation">
@@ -35,31 +45,31 @@
         <!-- buttons 4,5,6,- -->
         <div class="button-container">
             <div class="button-separation">
-                <div onclick="pressButton()" class="buttons">4</div>
+                <div onclick="pressButton('4')" class="buttons">4</div>
             </div>
             <div class="button-separation">
-                <div onclick="pressButton()" class="buttons">5</div>
+                <div onclick="pressButton('5')" class="buttons">5</div>
             </div>
             <div class="button-separation">
-                <div onclick="pressButton()" class="buttons">6</div>
+                <div onclick="pressButton('6')" class="buttons">6</div>
             </div>
             <div class="button-separation">
-                <div onclick="pressButton()" class="buttons">-</div>
+                <div onclick="pressOperation('-')" class="buttons">-</div>
             </div>
         </div>
         <!-- buttons 1,2,3,+ -->
         <div class="button-container">
             <div class="button-separation">
-                <div onclick="pressButton()" class="buttons">1</div>
+                <div onclick="pressButton('1')" class="buttons">1</div>
             </div>
             <div class="button-separation">
-                <div onclick="pressButton()" class="buttons">2</div>
+                <div onclick="pressButton('2')" class="buttons">2</div>
             </div>
             <div class="button-separation">
-                <div onclick="pressButton()" class="buttons">3</div>
+                <div onclick="pressButton('3')" class="buttons">3</div>
             </div>
             <div class="button-separation">
-                <div onclick="pressButton()" class="buttons">+</div>
+                <div onclick="pressOperation('+')" class="buttons">+</div>
             </div>
         </div>
         <!-- buttons 0,.,= -->
@@ -69,7 +79,10 @@
                     <div class="buttons-zero">0</div>
                 </div>
                 <div class="button-separation">
-                    <div class="buttons">.</div>
+                    <div onclick="pressButton('.')" class="buttons">.</div>
+                </div>
+                <div class="button-separation">
+                    <div class="buttons" onclick="pressOperation('/')">/</div>
                 </div>
                 <div class="button-separation">
                     <div class="buttons" onclick="calculateResult()">=</div>
